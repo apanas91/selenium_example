@@ -2,6 +2,7 @@ import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -23,8 +24,6 @@ public class IndexPageParametrizedTest {
     private IndexPage indexPage;
     private String login = System.getProperty("github.login");
     private String password = System.getProperty("github.password");
-    private String nodeURL1 = System.getProperty("selenium.server.remote");
-
 
     @DataProvider
     public static Object[][] browsers() {
@@ -53,6 +52,4 @@ public class IndexPageParametrizedTest {
     public void close() {
         driver.quit();
     }
-
-
 }
